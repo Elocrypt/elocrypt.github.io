@@ -4,90 +4,117 @@
   <title>John's Pixel Art Portal</title>
   
   <style>
+
+    /* Google font */
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    /* Core styles */
     body {
-      background-color: #333333;
-      color: #00ff99;
-      font-family: 'Press Start 2P', cursive;
+      background-color: #333;
+      color: #0cf;
+      font-family: 'Press Start 2P', sans-serif;
     }
-    
+
     h1, h2 {
-      text-align: center;
+      text-align: center; 
     }
-    
+
+    /* Pixel image styles */
     .pixel-image {
       image-rendering: pixelated;
       image-rendering: crisp-edges;
+      width: 200px;
     }
-    
+
+    /* Game canvas styles */
+    #bitBlaster, #magicMushroom {
+      border: 5px solid #0cf;
+      background: #000;
+      width: 400px;
+      height: 400px;
+    }
+
   </style>
-  
+
 </head>
 
 <body>
 
   <h1>John's Pixel Art Portal</h1>
 
-  <!-- About Section -->
-  
+  <!-- About section -->
+
   <h2>About John</h2>
-  
-  <p>John is an enneagram type 5 - an observer who seeks understanding of himself and the world through analysis and imagination. He delves into his rich inner world of concepts and abstractions, and expresses his wondrous ideas through pixel art and programming.</p> 
-  
-  <p>As a child, John spent hours studying pixel art in classic video games. He was mesmerized by the nostalgic graphics and chiptune sounds that could create immersive virtual worlds and game mechanics.</p>
-   
-  <p>Today, John brings this retro aesthetic into his own creations. He combines his love of pixel art, music, and interactive code to build one-of-a-kind browser-based games and animations.</p>
-   
-  <p>When he's not creating pixel worlds, John is learning about psychology, philosophy, and game design. He is fascinated by what makes things - and people - tick. He aims to better understand the human experience through his introspective lens.</p>
-   
-  <p>John hopes his pixel art and games provide others with moments of wonder, imagination, and nostalgia for retro computing.</p>
-   
-  <!-- Game Gallery -->
-  
+
+  <p>John is...</p>
+
+  <!-- Game gallery -->
+
   <h2>Pixel Games</h2>
-  
+
   <h3>Bit Blaster</h3>
-  
-  <p>Navigate your pixel ship through an asteroid field in this retro arcade shooter!</p>
-  
-  <canvas id="bitBlaster" width="400" height="400">
-    <!--JavaScript game code using Canvas API-->
-  </canvas>
-   
+
+  <p>Game description...</p>
+
+  <canvas id="bitBlaster"></canvas>
+
   <h3>Super Magic Mushroom</h3>
-   
-  <p>Jump and stretch to collect magic mushrooms in this psychedelic platformer!</p>
-   
-  <canvas id="magicMushroom" width="400" height="400">
-  </canvas>
-  
-  <!-- Image Gallery -->
-   
+
+  <p>Game description...</p>
+
+  <canvas id="magicMushroom"></canvas>
+
+  <!-- Image gallery -->
+
   <h2>Pixel Art Gallery</h2>
-  
+
   <img src="pixel-art-1.png" class="pixel-image">
   <img src="pixel-art-2.png" class="pixel-image">
-  <img src="pixel-art-3.png" class="pixel-image">
-  
-  <!-- Video Section -->
-   
+
+  <!-- Animations -->
+
   <h2>Animations</h2>
-   
-  <iframe 
-  width="560" 
-  height="315" 
-  src="pixel-animation.mp4">
-  </iframe>
-   
-  <!-- Social Media -->
-  
+
+  <iframe src="pixel-animation.mp4"></iframe>
+
+  <!-- Social media -->
+
   <h2>Connect</h2>
-  
-  <p>Twitch <a href="https://www.twitch.tv/john">@john</a> - Live pixel art streams</p>
-  
-  <p>Twitter <a href="https://twitter.com/john">@john</a></p>
-   
-  <p>Discord Pixel Scene - Chat about pixel art</p>
-   
+
+  <p>Links...</p>
+
 </body>
+
+<script>
+
+  // JavaScript game code
+
+  const canvas = document.getElementById('bitBlaster');
+  const ctx = canvas.getContext('2d');
+
+  // Draw sprite
+
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(50, 50, 20, 20);
+
+  // Game loop
+  function gameLoop() {
+
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    // Draw sprite
+    ctx.fillRect(x, y, 20, 20);
+
+    // Update position
+    x += 2;
+    y += 1;
+
+    requestAnimationFrame(gameLoop);
+  }
+
+  gameLoop();
+
+</script>
 
 </html>
