@@ -1,0 +1,30 @@
+/* Define your cyberpunk-inspired retro style here */
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: "Courier New", monospace;
+}
+
+header, nav, section, footer {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #00ff00;
+    background-color: #000;
+}
+
+h1, h2 {
+    color: #00ff00;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: #00ff00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
