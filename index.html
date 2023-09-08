@@ -1,120 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>John's Pixel Art Portal</title>
-  
-  <style>
-
-    /* Google font */
-    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
-    /* Core styles */
-    body {
-      background-color: #333;
-      color: #0cf;
-      font-family: 'Press Start 2P', sans-serif;
-    }
-
-    h1, h2 {
-      text-align: center; 
-    }
-
-    /* Pixel image styles */
-    .pixel-image {
-      image-rendering: pixelated;
-      image-rendering: crisp-edges;
-      width: 200px;
-    }
-
-    /* Game canvas styles */
-    #bitBlaster, #magicMushroom {
-      border: 5px solid #0cf;
-      background: #000;
-      width: 400px;
-      height: 400px;
-    }
-
-  </style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Elo's Retro World</title>
 </head>
-
 <body>
+    <header>
+        <h1>Elo's Retro World</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#social">Social</a></li>
+        </ul>
+    </nav>
 
-  <h1>John's Pixel Art Portal</h1>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Welcome to my pixelated corner of the internet. I'm Elo, an enneagram type 5 with a passion for art and programming. My introspective and analytical nature drives my creative work, which you'll explore on this site.</p>
+    </section>
 
-  <!-- About section -->
+    <section id="gallery">
+        <h2>Pixel Art Gallery</h2>
+        <!-- Add your pixel art images here -->
+    </section>
 
-  <h2>About John</h2>
+    <section id="videos">
+        <h2>Pixel Art Animations</h2>
+        <!-- Add your pixel art animations or videos here -->
+    </section>
 
-  <p>John is...</p>
+    <section id="social">
+        <h2>Connect with Me</h2>
+        <div id="twitch-stream">
+            <!-- Add your Twitch stream embed code here -->
+        </div>
+        <div id="social-links">
+            <a href="https://twitter.com/YourTwitterProfile" target="_blank">Twitter</a>
+            <!-- Add other social media links here -->
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2023 Elo's Retro World</p>
+    </footer>
 
-  <!-- Game gallery -->
-
-  <h2>Pixel Games</h2>
-
-  <h3>Bit Blaster</h3>
-
-  <p>Game description...</p>
-
-  <canvas id="bitBlaster"></canvas>
-
-  <h3>Super Magic Mushroom</h3>
-
-  <p>Game description...</p>
-
-  <canvas id="magicMushroom"></canvas>
-
-  <!-- Image gallery -->
-
-  <h2>Pixel Art Gallery</h2>
-
-  <img src="pixel-art-1.png" class="pixel-image">
-  <img src="pixel-art-2.png" class="pixel-image">
-
-  <!-- Animations -->
-
-  <h2>Animations</h2>
-
-  <iframe src="pixel-animation.mp4"></iframe>
-
-  <!-- Social media -->
-
-  <h2>Connect</h2>
-
-  <p>Links...</p>
-
+    <script src="script.js"></script>
 </body>
-
-<script>
-
-  // JavaScript game code
-
-  const canvas = document.getElementById('bitBlaster');
-  const ctx = canvas.getContext('2d');
-
-  // Draw sprite
-
-  ctx.fillStyle = '#fff';
-  ctx.fillRect(50, 50, 20, 20);
-
-  // Game loop
-  function gameLoop() {
-
-    // Clear canvas
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-    // Draw sprite
-    ctx.fillRect(x, y, 20, 20);
-
-    // Update position
-    x += 2;
-    y += 1;
-
-    requestAnimationFrame(gameLoop);
-  }
-
-  gameLoop();
-
-</script>
-
 </html>
